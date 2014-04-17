@@ -1,0 +1,15 @@
+<config name="Default">
+<WIIBTNA key="0x32"/>
+<WIIBTNB key="0xa7"/>
+<WIIBTNLEFT key="0x11"/>
+<WIIBTNRIGHT key="0x10"/>
+<WIIBTNUP key="0x0e"/>
+<WIIBTNDOWN key="0x0f"/>
+<WIIBTNHOME key="0xb4"/>
+<WIIBTN1 key="0x34"/>
+<WIIBTN2 key="0x31"/>
+<WIIBTNMINUS key="0xa4"/>
+<WIIBTNPLUS key="0xa5"/>
+
+</config>
+

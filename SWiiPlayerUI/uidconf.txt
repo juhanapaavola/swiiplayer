@@ -1,0 +1,1 @@
+This button toggles server to load automatically new config file for foreground application. Filename is named with applications UID hex code with .xml extension. Example: \data\WiiControllerConfigs\1234abcd.xml now if foreground application has same UID as filename is, it is loaded instantly

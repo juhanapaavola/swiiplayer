@@ -1,0 +1,8 @@
+SWiiPlayer - Copyright (C) 2010 Juhana Paavola <juhana.paavola@gmail.com>
+
+http://projects.forum.nokia.com/swiiplayer
+
+Disclaimer & Warranty
+---------------------
+
+Absolutely no warranty, not any kind. I will not be responsible if you break or damage you, hardware or something else somehow. You use software at your own risk.

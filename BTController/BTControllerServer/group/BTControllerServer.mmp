@@ -1,0 +1,62 @@
+/* 
+ * BTController - Connecting WiiMote to Symbian phone
+ * Copyright (C) 2010 Juhana Paavola <juhana.paavola@gmail.com>
+ * 
+ * This file is part of BTController.
+ * 
+ * BTController is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * BTController is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with BTController.  If not, see <http://www.gnu.org/licenses/>.
+ */
+  
+#include "..\inc\buildflags.hrh"
+#ifdef _SEND_KEYEVENTS
+MACRO _SEND_KEYEVENTS
+#endif
+
+TARGET		  BTControllerServer.exe
+TARGETTYPE	  exe
+UID			 0 SERVERUID
+
+USERINCLUDE	 ..\inc ..\inc
+SYSTEMINCLUDE   \epoc32\include \epoc32\include\mw\ \epoc32\include\platform\mw \epoc32\include\platform\ \epoc32\include\platform\elements\
+
+SOURCEPATH	  ..\src
+SOURCE BTControllerServer.cpp
+SOURCE BTControllerServerSession.cpp
+SOURCE BTController.cpp
+SOURCE BTPowerQuery.cpp
+SOURCE DeviceFinder.cpp
+SOURCE CommandParser.cpp
+SOURCE ConnectionData.cpp
+SOURCE CommandCreator.cpp
+SOURCE tremoteinfo.cpp
+SOURCE SocketConnector.cpp
+SOURCE XmlLoader.cpp
+SOURCE ForegroundListener.cpp
+SOURCE BLParser.cpp
+
+LIBRARY		 euser.lib bluetooth.lib btextnotifiers.lib esock.lib cenrepnotifhandler.lib centralrepository.lib  btdevice.lib xmlframework.lib efsrv.lib cone.lib bafl.lib platformenv.lib ws32.lib apgrfx.lib
+
+LIBRARY flogger.lib
+
+
+#ifdef _SEND_KEYEVENTS
+CAPABILITY LocalServices NetworkServices ReadUserData SwEvent UserEnvironment WriteUserData
+#else
+CAPABILITY LocalServices NetworkServices ReadUserData UserEnvironment WriteUserData
+#endif
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE_UDEBONLY
+#endif
+
+EXPORTUNFROZEN

@@ -1,0 +1,1 @@
+Opens file dialog to default configuration directory. Here will be button mapping XML files. Content of file shows what button is mapped to what key event. You can add more, easiest way is to copy default config and modify it, then copy back to phone with new name.
